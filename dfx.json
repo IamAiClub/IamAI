@@ -1,0 +1,18 @@
+{
+  "canisters": {
+    "iamai_website": {
+      "dependencies": [],
+      "source": ["iamai_website/dist"],
+      "type": "assets",
+      "workspace": "iami_website"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,99 @@
+/// <reference types="vitest" />
+
+import { sveltekit } from '@sveltejs/kit/vite'
+import dotenv from 'dotenv'
+import { resolve } from 'node:path'
+import { defineConfig } from 'vite'
+import environment from 'vite-plugin-environment'
+import { SvelteKitPWA } from '@vite-pwa/sveltekit'
+
+dotenv.config({ path: '../.env' })
+
+if (process.env.PUBLIC_DFX_NETWORK === 'ic') {
+  process.env.NODE_ENV === 'production'
+}
+
+export default defineConfig({
+  define: {
+    'process.env.NODE_ENV':
+      process.env.NODE_ENV === 'production' ? '"production"' : '"development"'
+  },
+  build: {
+    emptyOutDir: true
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'globalThis'
+      }
+    }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:4943',
+        changeOrigin: true
+      }
+    }
+  },
+  plugins: [
+    sveltekit(),
+    environment('all', { prefix: 'CANISTER_' }),
+    environment('all', { prefix: 'DFX_' }),
+    SvelteKitPWA({
+      srcDir: './src',
+      mode: 'production',
+      strategies: 'injectManifest',
+      filename: 'service-worker.ts',
+      scope: '/',
+      base: '/',
+      selfDestroying: process.env.SELF_DESTROYING_SW === 'true',
+      pwaAssets: {
+        config: true
+      },
+      manifest: {
+        short_name: 'CCFC DAO',
+        name: 'CCFC',
+        description:
+          'A decentralized CCFC meme brand built on the Internet Computer.',
+        icons: [
+          {
+            src: '/_assets/favicons/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          }
+        ],
+        start_url: '/',
+        scope: '/',
+        display: 'standalone',
+        theme_color: '#ffffff',
+        background_color: '#ffffff'
+      },
+      injectManifest: {
+        globPatterns: [
+          'client/**/*.{js,css,ico,png,jpg,svg,webp,woff,woff2,xml}',
+          'prerendered/**/*.html'
+        ]
+      },
+      devOptions: {
+        enabled: false,
+        suppressWarnings: process.env.SUPPRESS_WARNING === 'true',
+        type: 'module',
+        navigateFallback: '/'
+      },
+      // if you have shared info in svelte config file put in a separate module and use it also here
+      kit: {
+        includeVersionFile: true
+      }
+    })
+  ],
+  // test: {
+  //   environment: 'jsdom',
+  //   setupFiles: 'src/setupTests.js'
+  // },
+  resolve: {
+    alias: {
+      $declarations: resolve('../declarations')
+    }
+  }
+})
