@@ -1,5 +1,11 @@
 {
   "iamai_website": {
     "ic": "ckpof-haaaa-aaaam-acija-cai"
+  },
+  "iamai_ledger": {
+    "ic": "kqigp-jiaaa-aaaan-qzqsq-cai"
+  },
+  "iamai_ledger_indexer": {
+    "ic": "kzlnt-7aaaa-aaaan-qzqta-cai"
   }
 }

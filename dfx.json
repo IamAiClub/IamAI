@@ -5,6 +5,16 @@
       "source": ["iamai_website/dist"],
       "type": "assets",
       "workspace": "iami_website"
+    },
+    "iamai_ledger": {
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/2190613d3b5bcd9b74c382b22d151580b8ac271a/rs/ledger_suite/icrc1/ledger/ledger.did",
+      "type": "custom",
+      "wasm": "https://download.dfinity.systems/ic/2190613d3b5bcd9b74c382b22d151580b8ac271a/canisters/ic-icrc1-ledger.wasm.gz"
+    },
+    "iamai_ledger_indexer": {
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/2190613d3b5bcd9b74c382b22d151580b8ac271a/rs/ledger_suite/icrc1/index-ng/index-ng.did",
+      "type": "custom",
+      "wasm": "https://download.dfinity.systems/ic/2190613d3b5bcd9b74c382b22d151580b8ac271a/canisters/ic-icrc1-index-ng.wasm.gz"
     }
   },
   "defaults": {
