@@ -3,4 +3,4 @@ export const IS_LOCAL =
   document?.location.hostname.includes('localhost') ||
   document?.location.hostname.includes('127.0.0.1')
 
-export const PROJECT_URL = 'https://twitter.com/cc_fan_coin'
+export const PROJECT_URL = 'https://twitter.com/IamAICoin'

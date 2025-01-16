@@ -52,10 +52,10 @@ export default defineConfig({
         config: true
       },
       manifest: {
-        short_name: 'CCFC DAO',
-        name: 'CCFC',
+        short_name: 'IAMAI',
+        name: 'IAMAI',
         description:
-          'A decentralized CCFC meme brand built on the Internet Computer.',
+          'A decentralized IAMAI meme brand built on the Internet Computer.',
         icons: [
           {
             src: '/_assets/favicons/android-chrome-192x192.png',

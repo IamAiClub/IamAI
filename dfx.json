@@ -4,7 +4,7 @@
       "dependencies": [],
       "source": ["iamai_website/dist"],
       "type": "assets",
-      "workspace": "iami_website"
+      "workspace": "iamai_website"
     },
     "iamai_ledger": {
       "candid": "https://raw.githubusercontent.com/dfinity/ic/2190613d3b5bcd9b74c382b22d151580b8ac271a/rs/ledger_suite/icrc1/ledger/ledger.did",
@@ -23,6 +23,5 @@
       "packtool": ""
     }
   },
-  "output_env_file": ".env",
   "version": 1
 }

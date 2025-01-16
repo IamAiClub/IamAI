@@ -1,13 +1,15 @@
 <script lang="ts">
-  import IconGithub from '$lib/components/icons/IconGithub.svelte'
-  import IconTelegram from '$lib/components/icons/IconTelegram.svelte'
+  // import IconGithub from '$lib/components/icons/IconGithub.svelte'
   import IconX from '$lib/components/icons/IconX.svelte'
   import { PROJECT_URL } from '$lib/constants'
   import { ConicGradient } from '@skeletonlabs/skeleton'
   import Saos from 'saos'
-  import IconCcfc from '$lib/components/icons/IconCCFC.svelte'
-  import VideoEmbed from '$lib/components/core/VideoEmbed.svelte'
-  import IconWhitepaper from '$lib/components/icons/IconWhitepaper.svelte'
+  import IconIamai from '$lib/components/icons/IconIAMAI.svelte'
+  // import VideoEmbed from '$lib/components/core/VideoEmbed.svelte'
+  import IconMagnify from '$lib/components/icons/IconMagnify.svelte'
+  import IconExchangeFunds from '$lib/components/icons/IconExchangeFunds.svelte'
+  // import ButtonIc from '$lib/components/ui/ButtonIC.svelte'
+  // import IconAdd from '$lib/components/icons/IconAdd.svelte'
 </script>
 
 <div
@@ -20,45 +22,37 @@
       <div
         class="size-24 rounded-full transition duration-700 ease-in-out *:size-24 hover:scale-150 hover:shadow-lg"
       >
-        <IconCcfc />
+        <IconIamai />
       </div>
     </Saos>
-    <!-- <img class="mt-12" src="/_assets/ccfc-dao.svg" alt="CCFC brand" /> -->
-    <h1 class="h1 text-ccfc mb-6 mt-10 text-center font-extrabold uppercase"
-      ><b>Cerveza Cristal Fan Coin</b></h1
-    ><p class="text-2xl"> May the Meme Coin Be With You!</p>
+    <h1 class="h1 text-ccfc mb-6 mt-10 text-center font-extrabold"
+      ><b>I am AI Club</b></h1
+    ><p class="text-2xl">Tired of Fake AI? Join the $IAMAI Revolution!</p>
   </div>
   <div
     class="mt-10 flex max-w-4xl flex-row items-center gap-6 max-sm:flex-col *:max-sm:w-60"
   >
     <a
       type="button"
-      title="Participate in SNS sale"
+      title="Trade on ICPSwap"
       class="variant-filled btn token-sale"
-      href="https://nns.ic0.app/launchpad/"
+      href="https://app.icpswap.com/swap?input=ryjl3-tyaaa-aaaaa-aaaba-cai&output=kqigp-jiaaa-aaaan-qzqsq-cai"
       target="_blank"
     >
-      <span class="text-left">Token will launch soon! 🚀</span>
+      <span><IconExchangeFunds /></span>
+      <span class="text-left">Buy $IAMAI now</span>
     </a>
   </div>
   <div class="mt-6 max-w-screen-sm">
     <p class="text-center text-lg font-normal antialiased">
-      <b>Calling all Star Wars fanatics and crypto enthusiasts!</b> Get ready
-      for the
-      <a
-        class="text-ccfc font-bold underline underline-offset-4"
-        href={PROJECT_URL}
-        target="_blank">Cerveza Cristal Fan Coin</a
+      The crypto world is drowning in a sea of projects claiming to be the next
+      big thing in AI. But let's be honest, most of them are just riding the
+      hype train with no real substance. It's time to call out the imposters and
+      have a good laugh at the absurdity of it all. Enter $IAMAI, the <b
+        >meme coin</b
       >
-      (CCFC), the ultimate meme coin that celebrates the epicness of that viral Cerveza
-      Cristal ad sneaked into Star Wars Episode IV (you know the one, the thirst-quenchingly
-      awesome one).<br /><br />
-      <b>This ain't your average crypto</b>. CCFC is built on the cutting-edge
-      Internet Computer (ICP), and guess what? It's governed by a
-      <b>Decentralized Autonomous Organization (DAO)</b>, also known as a fancy
-      way of saying <b>the community is in charge</b>! Yep, most of the tokens
-      are in YOUR hands. <br /><br />
-      So, buckle up and join the CCFC crew for a galactic meme coin adventure!
+      that's not afraid to poke fun at the AI craze. We're here to expose the BS,
+      celebrate the community, and maybe even make some money while we're at it.
     </p>
   </div>
 
@@ -69,7 +63,7 @@
       type="button"
       title="Follow on Twitter"
       class="variant-filled btn bg-slate-950"
-      href="https://twitter.com/cc_fan_coin"
+      href={PROJECT_URL}
       target="_blank"
     >
       <span><IconX /></span>
@@ -77,57 +71,48 @@
     </a>
     <a
       type="button"
-      title="Join the Community"
+      title="Explorer"
       class="variant-filled btn bg-slate-950"
-      href="https://t.me/+9RXL44rH8m00YmY0"
+      href="https://ic.house/token/kqigp-jiaaa-aaaan-qzqsq-cai"
       target="_blank"
     >
-      <span><IconTelegram /></span>
-      <span class="text-left">Community</span>
+      <span><IconMagnify /></span>
+      <span class="text-left">Explore token</span>
     </a>
-    <a
-      type="button"
-      title="View Source Code"
-      class="variant-filled btn bg-slate-950"
-      href="https://github.com/CCFC-labs/ccfc-sns"
-      target="_blank"
-    >
-      <span class="*:scale-125"><IconGithub /></span>
-      <span class="text-left">Source Code</span>
-    </a>
-    <a
-      type="button"
-      title="Read the whitepaper"
-      class="variant-filled btn bg-slate-950"
-      href="https://github.com/CCFC-labs/ccfc-sns/blob/main/whitepaper/en.md"
-      target="_blank"
-    >
-      <span class="*:scale-125"><IconWhitepaper /></span>
-      <span class="text-left">Whitepaper</span>
-    </a>
-    <!-- <a
-      type="button"
-      title="Exchange Tokens"
-      class="variant-filled btn bg-slate-950"
-      href=""
-      target="_blank"
-    >
-      <span><IconExchangeDollar /></span>
-      <span class="text-left">Exchange</span>
-    </a> -->
   </div>
 
   <div
     class="mt-12 flex w-full max-w-screen-sm flex-col flex-nowrap content-center items-center text-lg sm:mt-24"
   >
     <h2 id="mission" class="h2 mb-10 font-extrabold uppercase">Our mission</h2>
-    We're not just about frosty Cristals, we're full-blown Star Wars fanatics too!
-    So when we saw that epic Cerveza Cristal ad grace the silver screen, well, let's
-    just say our minds were BLOWN. This wasn't just an ad, it was a meme waiting
-    to happen, and we knew it deserved a place in the intergalactic meme hall of
-    fame!
+    $IAMAI is more than just a meme coin; it's a movement. It's a community of crypto
+    enthusiasts who are tired of empty promises and inflated expectations. We're
+    here to expose the hype by shining a light on the projects that are using AI
+    as a buzzword without any real substance. We believe in transparency and honesty,
+    and we're not afraid to call out the BS.<br /><br />
 
-    <Saos
+    At the same time, we're uniting the skeptics by building a community of
+    like-minded individuals who can see through the hype. We're creating a space
+    where people can share their skepticism, have a laugh, and connect with
+    others who share their views.<br /><br />
+
+    Let's face it, the crypto world can be a wild and wacky place. That's why
+    we're embracing the absurdity and having some fun along the way. We believe
+    that laughter is the best medicine, especially when it comes to navigating
+    the ups and downs of the crypto market.<br /><br />
+
+    And most importantly, we're empowering the community. We believe in the
+    power of community. We're giving our members a voice and a platform to share
+    their ideas, contribute to the project, and shape the future of $IAMAI.<br
+    /><br />
+
+    Ultimately, our mission is to create a fun, engaging, and transparent
+    community where people can come together to laugh at the AI hype, support
+    each other, and maybe even make some money in the process. Join the $IAMAI
+    revolution and let's show the world that we're not falling for the BS. We're
+    here to stay, and we're having a blast doing it.<br /><br />
+
+    <!-- <Saos
       once={true}
       animation={'slide-top 0.6s cubic-bezier(.25,.46,.45,.94) both'}
     >
@@ -142,7 +127,7 @@
       >
         its wiki page
       </a> (it's practically required viewing for any true meme connoisseur).
-    </p>
+    </p> -->
   </div>
 
   <div
@@ -157,31 +142,15 @@
         <div class="flex flex-col gap-4 text-center">
           <h3 class="h3 font-bold">
             <p>Token Name</p>
-            <p class="text-ccfc"
-              >Cerveza Cristal Fan Coin
-              <!-- <a
-                class="underline underline-offset-4"
-                title="CCFC Token Info"
-                href="/#"
-                target="_blank">Cerveza Cristal Fan Coin</a
-              > -->
-            </p>
+            <p class="text-ccfc">I am AI </p>
           </h3>
           <h3 class="h3 font-bold">
             <p>Token Symbol</p>
-            <p class="text-ccfc"
-              >CCFC
-              <!-- <a
-                class="underline underline-offset-4"
-                title="Buy CCFC Tokens"
-                href="/#"
-                target="_blank"></a
-              > -->
-            </p>
+            <p class="text-ccfc">$IAMAI </p>
           </h3>
           <h3 class="h3 font-bold">
-            <p>Total Supply</p>
-            <p class="text-ccfc">1,000,000,000</p>
+            <p>Max Supply</p>
+            <p class="text-ccfc">4,242,424,242 $IAMAI</p>
           </h3>
         </div>
       </Saos>
@@ -195,27 +164,27 @@
           regionCone="hover:scale-125 hover:shadow-lg hover:-rotate-12 transition duration-700 ease-in-out"
           stops={[
             {
-              label: 'Dev Team',
+              label: 'Founders',
               color: '#4F46E5',
               start: 0,
               end: 10
             },
             {
-              label: 'SNS Swap',
+              label: 'Airdrops',
               color: '#0FBA81',
               start: 10,
-              end: 50
+              end: 70
             },
             {
-              label: 'DAO Treasury - Community & Marketing',
+              label: 'Liquidity',
               color: 'rgba(234,179,8,0.7)',
-              start: 50,
-              end: 60
+              start: 70,
+              end: 90
             },
             {
-              label: 'DAO Treasury - DEX Liquidity',
+              label: 'Future developments',
               color: 'rgba(234,179,8,0.4)',
-              start: 60,
+              start: 90,
               end: 100
             }
           ]}
@@ -227,58 +196,7 @@
     <Saos
       once={true}
       animation={'slide-top 0.6s cubic-bezier(.25,.46,.45,.94) both'}
-    >
-      <div class="mt-4 max-w-screen-sm text-lg font-normal antialiased">
-        <p
-          ><b>Hold onto your spacesuits, community first is our motto!</b> We're
-          handing over most of the CCFC tokens to YOU, the awesome fans. Why?
-          Because this project is all about <b>community power</b>.<br /><br />
-          We want CCFC to organically <b>blast off to the moon</b>, and that
-          means making sure there's enough fuel in the tank (liquidity) for
-          smooth trading on exchanges. That's why we're focusing on providing
-          plenty of liquidity – gotta make buying and selling CCFC a breeze!<br
-          /><br />
-          <b>Forget the fancy Neuron Fund</b>, this is a meme coin after all!
-          The team is here for the love of the game (and a few CCFC tokens
-          themselves).
-        </p>
-      </div>
-    </Saos>
-    <Saos
-      once={true}
-      animation={'slide-top 0.6s cubic-bezier(.25,.46,.45,.94) both'}
-    >
-      <div class="mt-12 gap-4">
-        <h3 class="h3 text-center font-bold">
-          <p>Treasury usage</p>
-        </h3>
-        <div class="mt-4 max-w-screen-sm text-lg font-normal antialiased">
-          <p>
-            Here's the breakdown on how we'll use the funds raised through the
-            SNS sale: <br /><br />
-            <b>80% Liquidity Pools:</b> We're all about a smooth-flowing market,
-            so this chunk will ensure easy buying and selling of CCFC.
-            <br />
-            <b>20% Marketing Mission:</b> Spreading the word and building a
-            vibrant CCFC community – that's what this 20% is for! The DAO will
-            decide exactly how to use these funds to fuel the hype. <br /><br />
-            <b>Bonus Level Unlocked!</b> If the Force is truly with us and we
-            raise over 20,000 ICP, we'll use the extra funds to build tools that
-            empower the entire <b>ICP Meme Coin ecosystem</b>. Talk about
-            building a meme-tastic future together! <br /><br /><b
-              >Want the nitty-gritty details on the SNS launch?</b
-            >
-            Check out the
-            <a
-              class="text-secondary-500 font-bold underline underline-offset-4"
-              href="https://github.com/CCFC-labs/ccfc-sns/blob/main/sns_init.yaml"
-              target="_blank">SNS init file</a
-            >
-            (it's basically the blueprint for our mission).
-          </p></div
-        >
-      </div>
-    </Saos>
+    ></Saos>
   </div>
 </div>
 

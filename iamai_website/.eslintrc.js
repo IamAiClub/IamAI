@@ -20,7 +20,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'ccfc_website/tsconfig.json',
+    project: 'iamai_website/tsconfig.json',
     extraFileExtensions: []
   },
   overrides: [
